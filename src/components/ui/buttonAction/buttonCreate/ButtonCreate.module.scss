@@ -1,0 +1,19 @@
+.button {
+	max-width: 40px;
+	max-height: 40px;
+	border: none;
+	cursor: pointer;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	align-self: start;
+	font-size: 1.5rem;
+	color: #fff;
+	border-radius: 8px;
+	box-shadow: 0 3px 5px rgba(0, 0, 0, 0.18);
+
+	&:hover,
+	&:active {
+		background-color: rgba(88, 86, 86, 0.18);
+	}
+}

@@ -1,0 +1,56 @@
+{
+	"env": {
+		"browser": true,
+		"es2021": true,
+		"jest": true
+	},
+	"extends": [
+		"react-app",
+		"react-app/jest",
+		"airbnb",
+		"airbnb-typescript",
+		"plugin:import/typescript",
+		"plugin:import/recommended",
+		"prettier"
+	],
+	"parser": "@typescript-eslint/parser",
+	"parserOptions": {
+		"ecmaFeatures": {
+			"jsx": true
+		},
+		"ecmaVersion": "latest",
+		"sourceType": "module",
+		"project": "./tsconfig.json"
+	},
+	"plugins": ["react", "@typescript-eslint", "eslint-plugin-import"],
+	"rules": {
+		"react/react-in-jsx-scope": ["off"],
+		"react/jsx-uses-react": ["off"],
+		"react/jsx-props-no-spreading": ["warn"],
+		"react/no-unescaped-entities": ["off"],
+		"import/no-unresolved": ["error", { "commonjs": true, "amd": true }],
+		"import/named": "error",
+		"import/namespace": "error",
+		"import/default": "error",
+		"import/export": "error",
+		"import/order": [
+			"error",
+			{
+				"groups": ["builtin", "external", "internal", ["parent", "sibling"]],
+				"pathGroups": [
+					{
+						"pattern": "react",
+						"group": "external",
+						"position": "before"
+					}
+				],
+				"pathGroupsExcludedImportTypes": ["react"],
+				"newlines-between": "always",
+				"alphabetize": {
+					"order": "asc",
+					"caseInsensitive": true
+				}
+			}
+		]
+	}
+}

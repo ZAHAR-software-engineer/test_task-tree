@@ -1,0 +1,25 @@
+.tree {
+	padding-left: 20px;
+	padding-top: 10px;
+	height: auto;
+}
+
+.node {
+	display: flex;
+	align-items: center;
+	height: auto;
+	cursor: pointer;
+}
+
+.arrow {
+	width: 40px;
+	height: 40px;
+}
+
+.title {
+	margin-right: 15px;
+}
+
+.buttons {
+	display: flex;
+}
